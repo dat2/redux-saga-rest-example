@@ -10,7 +10,7 @@ export const POST_HTTPBIN_FAILURE = 'POST_HTTPBIN_FAILURE';
 // get some fake data from httpbin
 export function getHttpBin() {
   return get('https://httpbin.org/get', {
-    success: getHttpBinSuccess,
+    success: response => response.json().then(getHttpBinSuccess),
     fail: getHttpBinFailure
   });
 }
@@ -27,7 +27,7 @@ function getHttpBinFailure(error) {
 export function postHttpBin() {
   return post('https://httpbin.org/post', {
     body: { hello: 'world' },
-    success: postHttpBinSuccess,
+    success: response => response.json().then(postHttpBinSuccess),
     failure: postHttpBinFailure
   });
 }

@@ -3,15 +3,15 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import loggerMiddleware from 'redux-logger';
+import fetchSaga from 'redux-saga-fetch';
 
 import reducer from './reducer';
-import restSaga from './restSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
   reducer,
   applyMiddleware(sagaMiddleware, loggerMiddleware)
 );
-sagaMiddleware.run(restSaga);
+sagaMiddleware.run(fetchSaga);
 
 export default store;
