@@ -27,5 +27,5 @@
     "gh-pages": "^1.0.0",
     "prettier": "^1.5.2"
   },
-  "homepage": "https://dat2.github.io/redux-saga-example"
+  "homepage": "https://dat2.github.io/redux-saga-rest-example"
 }
