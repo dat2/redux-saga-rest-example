@@ -28,7 +28,7 @@ export function postHttpBin() {
   return post('https://httpbin.org/post', {
     body: { hello: 'world' },
     success: response => response.json().then(postHttpBinSuccess),
-    failure: postHttpBinFailure
+    fail: postHttpBinFailure
   });
 }
 

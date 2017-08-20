@@ -3,7 +3,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import loggerMiddleware from 'redux-logger';
-import fetchSaga from 'redux-saga-fetch';
+import { saga as fetchSaga } from 'redux-saga-fetch';
 
 import reducer from './reducer';
 
