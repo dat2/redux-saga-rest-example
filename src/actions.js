@@ -1,4 +1,4 @@
-import { get, post } from './restActions';
+import { get, post } from 'redux-saga-fetch';
 
 // the result actions,
 export const GET_HTTPBIN_SUCCESS = 'GET_HTTPBIN_SUCCESS';
